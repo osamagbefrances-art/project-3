@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card.income p {
+  color: #2e7d32; /* Green for income */
+}
+
+.card.expense p {
+  color: #c62828; /* Red for expense */
+}
+
+.card.balance p {
+  color: #1565c0;
+}
+
+/* Form Styles */
+.form-section {
+  margin-bottom: 24px;
+}
+
+.form-section h2, .history-header h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #495057;
+}
+
+.form-control {
+  margin-bottom: 12px;
+}
+
+.form-control label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-control small {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Transaction Table */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#filter-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 0.85rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.9rem;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+/* Visual Dynamic Styling */
+tr.income-row {
+  border-left: 4px solid #2e7d32;
+}
+
+tr.expense-row {
+  border-left: 4px solid #c62828;
+}
+
+.amount-text.income {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.amount-text.expense {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+  background-color: #bb2d3b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+}
